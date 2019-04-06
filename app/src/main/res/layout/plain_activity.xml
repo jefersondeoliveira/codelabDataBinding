@@ -41,6 +41,7 @@
 
         <ImageView
             android:id="@+id/imageView"
+            app:popularityIcon="@{viewmodel.popularity}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
@@ -119,6 +120,7 @@
             app:hideIfZero="@{viewmodel.likes}"
             app:progressScaled="@{viewmodel.likes}"
             android:max="@{100}"
+            app:progressTint="@{viewmodel.popularity}"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
