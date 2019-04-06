@@ -4,6 +4,7 @@ package com.example.android.databinding.basicsample.ui
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.res.ColorStateList
+import android.databinding.DataBindingUtil
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
@@ -16,6 +17,7 @@ import android.widget.TextView
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.data.Popularity
 import com.example.android.databinding.basicsample.data.SimpleViewModel
+import com.example.android.databinding.basicsample.databinding.PlainActivityBinding
 
 /**
  * Plain old activity with lots of problems to fix.
@@ -28,7 +30,7 @@ class PlainOldActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.plain_activity)
+        val binding : PlainActivityBinding = DataBindingUtil.setContentView(this, R.layout.plain_activity)
 
         // TODO: Explicitly setting initial values is a bad pattern. We'll fix that.
         updateName()
